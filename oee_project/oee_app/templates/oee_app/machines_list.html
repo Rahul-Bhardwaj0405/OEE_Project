@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Machines List - My Website{% endblock %}
+
+{% block content %}
+  <h1>Machines List</h1>
+  <ul>
+    {% for machine in machines %}
+      <li>{{ machine.name }} - {{ machine.description }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

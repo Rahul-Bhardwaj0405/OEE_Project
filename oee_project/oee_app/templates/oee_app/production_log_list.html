@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Production Log List - My Website{% endblock %}
+
+{% block content %}
+  <h1>Production Log List</h1>
+  <ul>
+    {% for log in production_logs %}
+      <li>{{ log.machine }} - {{ log.production_date }} - {{ log.quantity }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
